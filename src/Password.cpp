@@ -2,6 +2,8 @@
 // Created by Javi on 1/4/17.
 //
 
+#include <set>
+#include <string>
 #include "Password.h"
 using namespace std;
 
@@ -28,5 +30,9 @@ bool Password::containsNumber() const {
 }
 
 bool Password::containsSpecialChar() const {
-    return true;
+    auto isSpecialChar = [] (auto c) {
+        set<char> specialChars = {'_','-','$','%'};
+        return specialChars.count(c);
+    };
+    return any_of(begin(password),end(password), isSpecialChar);
 }
