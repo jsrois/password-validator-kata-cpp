@@ -10,4 +10,7 @@ TEST_CASE("Password","[password]") {
     SECTION("is valid if it fulfills all the requirements") {
         REQUIRE(Password("ABcd123_").isValid());
     }
+    SECTION("must have at least 8 characters") {
+        REQUIRE_FALSE(Password("ABcv12_").isValid());
+    }
 }
