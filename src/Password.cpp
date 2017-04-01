@@ -4,6 +4,10 @@
 
 #include "Password.h"
 
-Password::Password(std::string password) {
+Password::Password(const std::string& password) {
     this->password = password;
+}
+
+bool Password::isValid() const {
+    return true;
 }

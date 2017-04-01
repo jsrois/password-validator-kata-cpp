@@ -10,11 +10,9 @@
 
 class Password {
 public:
-    Password(std::string password);
-    bool isValid() const {
-        return true;
-    }
-
+    Password(const std::string &password);
+    bool isValid() const;
+protected:
     std::string password;
 };
 
