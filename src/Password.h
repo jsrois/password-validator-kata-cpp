@@ -14,6 +14,8 @@ public:
     bool isValid() const;
 protected:
     std::string password;
+
+    bool hasMinimumLength() const;
 };
 
 

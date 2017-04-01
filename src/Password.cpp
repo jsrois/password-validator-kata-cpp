@@ -9,5 +9,7 @@ Password::Password(const std::string& password) {
 }
 
 bool Password::isValid() const {
-    return (password.length() >= 8);
+    return hasMinimumLength();
 }
+
+bool Password::hasMinimumLength() const { return (password.length() >= 8); }
