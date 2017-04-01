@@ -22,5 +22,9 @@ TEST_CASE("Password","[password]") {
     SECTION("must have at least one number") {
         REQUIRE_FALSE(Password("ABcdEFG_").isValid());
     }
-
+    SECTION("must include at least one of [_-$%]"){
+        REQUIRE_FALSE(Password("ABcdEf91").isValid());
+    }
 }
+
+

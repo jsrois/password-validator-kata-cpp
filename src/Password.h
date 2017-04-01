@@ -21,6 +21,8 @@ protected:
     bool containsLowercase() const;
 
     bool containsNumber() const;
+
+    bool containsSpecialChar() const;
 };
 
 

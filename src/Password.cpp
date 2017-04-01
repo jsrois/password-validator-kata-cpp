@@ -13,7 +13,8 @@ bool Password::isValid() const {
     return hasMinimumLength() &&
            containsUppercase() &&
            containsLowercase() &&
-           containsNumber();
+           containsNumber() &&
+            containsSpecialChar();
 }
 
 bool Password::containsLowercase() const { return any_of(begin(password), end(password), islower); }
@@ -24,4 +25,8 @@ bool Password::hasMinimumLength() const { return (password.length() >= 8); }
 
 bool Password::containsNumber() const {
     return any_of(begin(password),end(password),::isnumber);
+}
+
+bool Password::containsSpecialChar() const {
+    return true;
 }
