@@ -19,6 +19,8 @@ protected:
     bool containsUppercase() const;
 
     bool containsLowercase() const;
+
+    bool containsNumber() const;
 };
 
 
