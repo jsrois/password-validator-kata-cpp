@@ -19,5 +19,8 @@ TEST_CASE("Password","[password]") {
     SECTION("must have at least one lowercase letter") {
         REQUIRE_FALSE(Password("ABCD123_").isValid());
     }
+    SECTION("must have at least one number") {
+        REQUIRE_FALSE(Password("ABcdEFG_").isValid());
+    }
 
 }
