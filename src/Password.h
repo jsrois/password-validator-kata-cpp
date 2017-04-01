@@ -17,6 +17,8 @@ protected:
     bool hasMinimumLength() const;
 
     bool containsUppercase() const;
+
+    bool containsLowercase() const;
 };
 
 

@@ -11,8 +11,11 @@ Password::Password(const std::string& password) {
 
 bool Password::isValid() const {
     return hasMinimumLength() &&
-           containsUppercase();
+           containsUppercase() &&
+           containsLowercase();
 }
+
+bool Password::containsLowercase() const { return any_of(begin(password), end(password), islower); }
 
 bool Password::containsUppercase() const { return any_of(begin(password), end(password), isupper); }
 
