@@ -4,6 +4,7 @@
 
 
 #include <catch/catch.hpp>
+#include <Password.h>
 
 TEST_CASE("Password","[password]") {
     SECTION("is valid if it fulfills all the requirements") {
