@@ -15,6 +15,8 @@ public:
 protected:
     std::string password;
     bool hasMinimumLength() const;
+
+    bool containsUppercase() const;
 };
 
 
