@@ -13,4 +13,8 @@ TEST_CASE("Password","[password]") {
     SECTION("must have at least 8 characters") {
         REQUIRE_FALSE(Password("ABcv12_").isValid());
     }
+    SECTION("must have at least one uppercase letter") {
+        REQUIRE_FALSE(Password("abcd123_").isValid());
+    }
+
 }
